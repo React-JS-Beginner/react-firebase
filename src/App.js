@@ -8,6 +8,7 @@ import {
 } from "firebase/auth";
 import initializeAuthentication from "./Firebase/firebase.initialize";
 import { useState } from "react";
+import { Button } from "react-bootstrap";
 
 initializeAuthentication();
 
@@ -58,15 +59,21 @@ function App() {
   return (
     <div className="App">
       {!user.name ? (
-        <div>
-          <button onClick={googleHandler}>Sign In With Google</button>
-          <button onClick={githubHandler}>Sign In With Github</button>
+        <div className="m-5 p-5">
+          <Button variant="outline-primary" onClick={googleHandler}>
+            Sign In With Github
+          </Button>{" "}
+          &nbsp; &nbsp; &nbsp;
+          <Button variant="outline-success" onClick={githubHandler}>
+            Sign In With Github
+          </Button>
         </div>
       ) : (
-        <button onClick={signOutHandler}>Sign Out</button>
+        <Button  className="m-5" variant="outline-danger" onClick={signOutHandler}>Sign Out</Button>
       )}
 
       <br />
+
       {user.name && (
         <div>
           <h2>Welcome {user.name}</h2>
@@ -78,4 +85,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;
