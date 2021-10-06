@@ -61,7 +61,7 @@ function App() {
       {!user.name ? (
         <div className="m-5 p-5">
           <Button variant="outline-primary" onClick={googleHandler}>
-            Sign In With Github
+            Sign In With Google
           </Button>{" "}
           &nbsp; &nbsp; &nbsp;
           <Button variant="outline-success" onClick={githubHandler}>
