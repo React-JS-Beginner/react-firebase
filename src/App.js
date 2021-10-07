@@ -73,7 +73,7 @@ function App() {
       )}
 
       <br />
-
+        {/* rendering UI */}
       {user.name && (
         <div>
           <h2>Welcome {user.name}</h2>
