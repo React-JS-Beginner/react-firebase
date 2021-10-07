@@ -69,16 +69,32 @@ function App() {
           </Button>
         </div>
       ) : (
-        <Button  className="m-5" variant="outline-danger" onClick={signOutHandler}>Sign Out</Button>
+        <Button
+          className="m-5"
+          variant="outline-danger"
+          onClick={signOutHandler}
+        >
+          Sign Out
+        </Button>
       )}
 
       <br />
-        {/* rendering UI */}
+      {/* rendering UI */}
       {user.name && (
         <div>
           <h2>Welcome {user.name}</h2>
-          <h3>Your Email : {user.email}</h3>
-          <img src={user.image} alt="" />
+
+          <img
+            class="
+                    rounded-circle
+                    mt-5
+                    border border-5 border-white
+                    shadow-lg
+                    frame
+                  "
+            src={user.image}
+            alt=""
+          />
         </div>
       )}
     </div>
